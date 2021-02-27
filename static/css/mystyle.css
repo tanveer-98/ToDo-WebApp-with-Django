@@ -1,0 +1,74 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 6fr  1fr 1fr;
+  gap: 2px;
+  grid-auto-rows: auto;
+  margin-bottom: 10px;
+}
+.wrapper-title {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  gap: 2px;
+  grid-auto-rows: auto;
+  margin-bottom: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: left;
+    background-color: #6200EA
+}
+input,a
+{
+  margin:10px;
+}
+input[type=text]
+{
+
+}
+.font-1
+{
+font-family: 'Akaya Telivigala', cursive;
+font-size: 20px;
+}
+
+.shape1{
+
+  border-radius:10px;
+  margin: 10px;
+}
+
+.container-bg-white
+{
+  margin: 5px;
+  background-color:LightGray;
+  border-radius:5px;
+}
+
+.container-bg-tasks
+{
+  margin: 5px;
+  background-color:LightGray;
+  border-radius:5px;
+}
+.container-outer
+{
+  background-color:white;
+  margin-top:100px;
+  padding:20px;
+  border-radius: 5px;
+
+}
+
+.effect7
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}

@@ -37,8 +37,4 @@ def deleteTask(request,pk):
     if request.method=='POST':
         task.delete()
         return redirect('/')
-    return render(request,'tasks/delete.html')
-
-
-
-    return redirect('index')
+    return render(request,'tasks/index.html')
