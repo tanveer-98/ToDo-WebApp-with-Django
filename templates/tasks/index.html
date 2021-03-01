@@ -20,42 +20,36 @@
 
     <link rel="stylesheet" href="{%static 'css/mystyle.css'%}">
     <link rel="stylesheet" href="{%static 'css/animatedbg.css'%}">
-
+<link rel="stylesheet" href="{%static 'css/shadows.css'%}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
 
 <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+
+
   <body>
 
 
-<div class="container container-outer effect7">
-  <div class ="container container-bg-white  ">
-    <form  method="post">
-      {%csrf_token%}
-      {{form}}
-      <input class="btn btn-info" type="submit" name="submit" value="ADD">
-    </form>
+
+<div class="container container-outer effect7 ">
+
+
+  <div class=" wrapper-title container-bg-titlebar rows effect7">
+    <div class="t-one">
+      <img src="{%static 'images/todo-list.png' %}" class="shape1" width="50px" height="50px" alt="image not found">
+    </div>
+    <div class="center">
+      <h1 class='Display-1 font-title'>TASKS TO DO</h1>
+    </div>
   </div>
 
-  <div class="container container-bg-white ">
 
-   <div class="wrapper-title">
-     <div class="one">
-       <img src="{%static 'images/todo-list.png' %}" class="shape1" width="50px" height="50px"alt="image not found">
-     </div>
-     <div class="two">
-
-     </div>
-
-   </div>
-   <img src="{%static 'images/todo-list.png' %}" class="shape1" width="50px" height="50px"alt="image not found">
-  </div>
-  <div class="container ">
+  <div class="container-white shadow">
 
       {% for t in task%}
-      <div class="wrapper font-1 container-bg-tasks">
+      <div class="wrapper font-1 rows effect7">
 
-        <div class="one">
+        <div class="tasks">
           {% if t.complete == True %}
           <strike > {{t}}</strike>
           {%else %}
@@ -63,20 +57,23 @@
           {%endif%}
         </div>
 
-        <div class="two ">
-          <a class='btn btn-primary' href="{%url 'update_task' t.id %}">Update Task</a>
-        </div>
-
-        <div class="three">
+          <a class='btn btn-primary color-yellow' href="{%url 'update_task' t.id %}">Update Task</a>
           <form  action='{%url 'delete_task' t.id %}' method="post">
             {%csrf_token%}
-            <input class='btn btn-primary' type="submit" name="task_delete" value="DELETE TASK">
+            <input class='btn btn-primary color-red' type="submit" name="task_delete" value="DELETE TASK">
           </form>
-        </div>
 
       </div>
       {%endfor%}
 
+  </div>
+
+  <div class ="wrapper-add-task effect7 container-foot tasks ">
+    <form  method="post">
+      {%csrf_token%}
+      {{form}}
+      <input class="btn btn-info" type="submit" name="submit" value="ADD">
+    </form>
   </div>
 
 </div>

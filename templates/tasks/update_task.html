@@ -1,16 +1,40 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+      <link rel="stylesheet" href="{%static 'css/mystyle.css'%}">
+      <link rel="stylesheet" href="{%static 'css/animatedbg.css'%}">
+      <link rel="stylesheet" href="{%static 'css/shadows.css'%}">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
   <body>
-     
-    <form method="post">
-      {%csrf_token%}
-      {{newtaskform.as_p}}
-    <input type="submit" name="update" value="Update Task">
-    </form>
+<div class="container container-outer rows effect7">
+  <form method="post">
+    {%csrf_token%}
+    {{newtaskform.as_p}}
+  <input class="btn btn-primary color-yellow " type="submit" name="update" value="Update Task">
+  </form>
+</div>
+
 
   </body>
 </html>
